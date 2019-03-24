@@ -32,7 +32,7 @@ function create () {
     background = this.add.image(480, 320, 'background');
     
     player = this.physics.add.sprite(480, 320, 'ship');
-    player.setMaxVelocity(250);
+    player.setMaxVelocity(400);
     player.setDamping(true);
     player.setDrag(0.97);
     
@@ -43,10 +43,10 @@ function create () {
 
 function update () {    
     if (cursors.right.isDown) {
-        player.setAngularVelocity(10);
+        player.setAngularVelocity(20);
     }
     else if (cursors.left.isDown) {
-        player.setAngularVelocity(-10);
+        player.setAngularVelocity(-20);
     }
     else {
         player.setAngularVelocity(0);
